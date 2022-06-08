@@ -72,10 +72,13 @@ router.get('/:id', async (req, res) => {
 router.get('/', async (req, res) => {
     const username = req.query.user;
     const catName = req.query.cat;
+    const qNew = req.query.new;
     try {
        let posts;
-       if(username) {
-           posts = await Post.find({username})
+       if(qNew) {
+        posts = await Post.find().sort({createdAt: -1}).limit(1);
+       } else if(username) {
+        posts = await Post.find({username})
        } else if(catName) {
         posts = await Post.find({categories: {
             $in:[catName],
