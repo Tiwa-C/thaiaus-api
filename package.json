@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "engines": {
-    "node": "16.x"
+    "node": "16.x",
+    "npm": "8.x"
   },
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "build": "./node_modules/.bin/webpack --config webpack.conf.js"
   },
   "keywords": [],
   "author": "",
