@@ -8,8 +8,9 @@
   },
   "scripts": {
     "start": "node index.js",
+    "build": "ng build",
     "heroku-postbuild": "cd client && npm install && npm run build",
-    "build": "webpack"
+    
   },
   "keywords": [],
   "author": "",
