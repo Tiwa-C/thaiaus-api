@@ -8,7 +8,6 @@
   },
   "scripts": {
     "start": "node index.js",
-    "build": "build",
     "heroku-postbuild": "cd client && npm install && npm run build"
     
   },
