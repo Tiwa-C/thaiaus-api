@@ -7,7 +7,9 @@
     "npm": "8.x"
   },
   "scripts": {
+    "install": "cd client && npm install",
     "start": "node index.js",
+    "client": "npm start --prefix client",
     "heroku-postbuild": "cd client && npm install"
     
   },
